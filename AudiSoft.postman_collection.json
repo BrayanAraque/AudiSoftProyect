@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "80c3811d-0182-461a-bd86-c310ce0a8b3b",
+		"name": "AudiSoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28585375"
+	},
+	"item": [
+		{
+			"name": "Notas",
+			"item": [
+				{
+					"name": "https://localhost:7125/api/Notas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"notaName\": \"string\",\r\n  \"status\": \"string\",\r\n  \"profesorId\": 2,\r\n  \"estudianteId\": 6\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7125/api/Notas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7125",
+							"path": [
+								"api",
+								"Notas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:7125/api/Notas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7125/api/Notas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7125",
+							"path": [
+								"api",
+								"Notas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:7125/api/Notas/22",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 22,\r\n  \"notaName\": \"ANDRES\",\r\n  \"status\": \"APROVO\",\r\n  \"profesorId\": 2,\r\n  \"estudianteId\": 6\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7125/api/Notas/22",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7125",
+							"path": [
+								"api",
+								"Notas",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:7125/api/Notas/16",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7125/api/Notas/16",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7125",
+							"path": [
+								"api",
+								"Notas",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profesores",
+			"item": [
+				{
+					"name": "https://localhost:7125/api/Profesors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7125/api/Profesors",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7125",
+							"path": [
+								"api",
+								"Profesors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estudiantes",
+			"item": [
+				{
+					"name": "https://localhost:7125/api/Estudiantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7125/api/Estudiantes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7125",
+							"path": [
+								"api",
+								"Estudiantes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

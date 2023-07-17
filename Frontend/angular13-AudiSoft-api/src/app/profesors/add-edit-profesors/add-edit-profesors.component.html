@@ -1,0 +1,13 @@
+<form>
+  <div class="mb-3">
+    <label for="profesorName" class="form-label">Profesores</label>
+    <input type="text" class="form-control" [(ngModel)]="profesorName" name="profesorName">
+  </div>
+
+  <button (click)="addProfesor()" *ngIf="profesor.id==0" class="btn btn-primary">
+    Add
+  </button>
+  <button (click)="updateprofesor()" *ngIf="profesor.id!=0" class="btn btn-primary">
+    Update
+  </button>
+</form>

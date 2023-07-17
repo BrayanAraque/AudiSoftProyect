@@ -1,0 +1,39 @@
+<form>
+  <div class="mb-3">
+    <label for="notaName" class="form-label">NotaName</label>
+    <input type="text" class="form-control" [(ngModel)]="notaName" name="notaName">
+  </div>
+  <div class="mb-3">
+    <label for="status" class="form-label">Status</label>
+    <select class="form-control" name="status" id="status" [(ngModel)]="status">
+      <option *ngFor="let status of statusList$|async" [value]="status.statusOption">{{ status.statusOption}}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="profesorId" class="form-label">Profesor</label>
+    <input type="text" class="form-control" name="profesorId" [(ngModel)]="profesorId"
+    *ngIf="nota.id!=0" disabled="">
+    <select class="form-control" name="profesorId" id="profesorId" [(ngModel)]="profesorId" *ngIf="nota.id==0">
+      <option *ngFor="let type of profesoresList$|async" [value]="type.id">{{type.profesorName}}</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="estudianteId" class="form-label">Estudiante</label>
+    <input type="text" class="form-control" name="estudianteId" [(ngModel)]="estudianteId"
+    *ngIf="nota.id!=0" disabled>
+    <select class="form-control" name="estudianteId" id="estudianteId" [(ngModel)]="estudianteId" *ngIf="nota.id==0">
+      <option *ngFor="let type of estudiantesList$|async" [value]="type.id">{{type.estudianteName}}</option>
+    </select>
+  </div>
+
+
+
+
+  <button (click)="addnota()" *ngIf="nota.id==0" class="btn btn-primary">
+    Add
+  </button>
+  <button (click)="updatenota()" *ngIf="nota.id!=0" class="btn btn-primary">
+    Update
+  </button>
+</form>
