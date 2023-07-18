@@ -26,6 +26,7 @@ export class AddEditProfesorsComponent implements OnInit {
     this.profesorList$ = this.service.getProfesoresList();
   }
 
+  //metodo para agregar profesor
   addProfesor(){
     var profesor = {
       profesorName:this.profesorName

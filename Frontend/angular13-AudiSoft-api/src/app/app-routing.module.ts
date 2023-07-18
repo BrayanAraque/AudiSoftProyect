@@ -5,7 +5,7 @@ import {ProfesorsComponent} from './profesors/profesors.component';
 import {EstudiantesComponent} from './estudiantes/estudiantes.component';
 import { NotasComponent } from './notas/notas.component';
 
-
+//ajuste menu
 const routes: Routes = [
   { path: '', redirectTo: '/notas', pathMatch: 'full' },
   {path:'notas',component:NotasComponent},

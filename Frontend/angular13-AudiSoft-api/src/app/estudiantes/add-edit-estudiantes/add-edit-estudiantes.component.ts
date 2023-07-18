@@ -22,7 +22,7 @@ export class AddEditEstudiantesComponent implements OnInit {
     this.estudianteName = this.estudiante.estudianteName;
     this.estudianteList$ = this.service.getEstudiantesList();
   }
-
+//metodos
   addEstudiante(){
     var estudiante = {
       estudianteName:this.estudianteName

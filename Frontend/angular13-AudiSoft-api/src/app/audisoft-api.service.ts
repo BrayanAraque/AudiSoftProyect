@@ -11,7 +11,7 @@ export class AudisoftApiService {
   readonly audisoftAPIUrl ="https://localhost:7125/api";
 
   constructor(private http:HttpClient) { }
-
+ //Endpoint
   getNotaList():Observable<any[]> {
     return this.http.get<any>(this.audisoftAPIUrl + '/Notas');
   }
